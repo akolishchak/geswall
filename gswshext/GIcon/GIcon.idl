@@ -1,0 +1,34 @@
+// GIcon.idl : IDL source for GIcon
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (GIcon.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(14E986D7-1C9B-4EF0-B5DE-449F6B7176BA),
+	helpstring("IGeSWallIcon Interface"),
+	pointer_default(unique)
+]
+interface IGeSWallIcon : IUnknown{
+};
+[
+	uuid(F876D463-EC6F-4E50-BCEA-082E9E870396),
+	version(1.0),
+	helpstring("GIcon 1.0 Type Library")
+]
+library GIconLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(64553E13-4BBB-4930-A3D0-4447DDC1B04A),
+		helpstring("GeSWallIcon Class")
+	]
+	coclass GeSWallIcon
+	{
+		[default] interface IGeSWallIcon;
+	};
+};

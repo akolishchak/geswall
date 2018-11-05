@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geswall", "geswall.vcproj", "{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		W2K Debug|Win32 = W2K Debug|Win32
+		W2K Debug|x64 = W2K Debug|x64
+		W2K PreFast|Win32 = W2K PreFast|Win32
+		W2K PreFast|x64 = W2K PreFast|x64
+		W2K Release|Win32 = W2K Release|Win32
+		W2K Release|x64 = W2K Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Debug|Win32.ActiveCfg = W2K Debug|Win32
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Debug|Win32.Build.0 = W2K Debug|Win32
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Debug|x64.ActiveCfg = W2K Debug|x64
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Debug|x64.Build.0 = W2K Debug|x64
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K PreFast|Win32.ActiveCfg = W2K PreFast|Win32
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K PreFast|Win32.Build.0 = W2K PreFast|Win32
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K PreFast|x64.ActiveCfg = W2K PreFast|x64
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K PreFast|x64.Build.0 = W2K PreFast|x64
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Release|Win32.ActiveCfg = W2K Release|Win32
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Release|Win32.Build.0 = W2K Release|Win32
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Release|x64.ActiveCfg = W2K Release|x64
+		{0EFF1D08-B258-46AF-AF54-29E5FCCB161E}.W2K Release|x64.Build.0 = W2K Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,406 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "..\\images\\gicon1.ico"
+IDI_ICON3               ICON                    "bitmap1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RESOURCE DIALOGEX 0, 0, 235, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Resource"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Security Class:",IDC_STATIC,13,14,48,8
+    COMBOBOX        IDC_SECUR,69,12,91,60,CBS_DROPDOWNLIST | WS_VSCROLL
+    GROUPBOX        "Identity",IDC_STATIC,7,34,221,99
+    LTEXT           "Resource Type:",IDC_STATIC,18,55,54,8
+    COMBOBOX        IDC_RESTYPE,102,51,77,63,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Owner user:",IDC_RADIO_OWNER,"Button",
+                    BS_AUTORADIOBUTTON,18,79,56,10
+    CONTROL         "Name:",IDC_RADIO_NAME,"Button",BS_AUTORADIOBUTTON,18,97,
+                    36,8
+    CONTROL         "Certificate issued to:",IDC_RADIO_CERT,"Button",
+                    BS_AUTORADIOBUTTON,18,114,83,10
+    EDITTEXT        IDC_OWNER_E,102,76,96,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME_E,102,95,115,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CERT_E,102,113,115,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OWNER_BROWSE,204,76,13,12
+END
+
+IDD_RESOURCE1 DIALOGEX 0, 0, 240, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Resource"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Security Class:",IDC_STATIC,13,15,48,8
+    COMBOBOX        IDC_SECUR,69,13,91,60,CBS_DROPDOWNLIST | WS_VSCROLL
+    GROUPBOX        "Identity",IDC_STATIC,9,37,221,101
+    LTEXT           "Resource Type:",IDC_STATIC,21,52,54,8
+    COMBOBOX        IDC_RESTYPE,84,48,68,63,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Owner user",IDC_RADIO_OWNER,"Button",BS_AUTORADIOBUTTON,
+                    19,68,53,10
+    CONTROL         "Name",IDC_RADIO_NAME,"Button",BS_AUTORADIOBUTTON,19,81,
+                    36,10
+    CONTROL         "Certificate",IDC_RADIO_CERT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,19,94,49,10
+    EDITTEXT        IDC_NAME_E,20,118,187,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OWNER_BROWSE,211,118,13,12
+    LTEXT           "Resource",IDC_STATIC,21,109,31,8
+    LTEXT           "",IDC_DESCRIPTION,84,69,131,47
+    CONTROL         "",IDC_LOGO,"Static",SS_GRAYFRAME | SS_CENTERIMAGE | NOT 
+                    WS_VISIBLE | WS_DISABLED,191,10,20,20,WS_EX_TRANSPARENT
+END
+
+IDD_GROUP DIALOGEX 0, 0, 195, 50
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Add Application Group"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Group Name",IDC_STATIC,16,9,90,8
+    EDITTEXT        IDC_GROUPNAME,15,19,173,14,ES_AUTOHSCROLL
+END
+
+IDD_APPLICATION DIALOGEX 0, 0, 235, 211
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_DISABLED | 
+    WS_CAPTION | WS_THICKFRAME
+CAPTION "Application Property"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Display Name:",IDC_STATIC,7,7,47,8
+    LTEXT           "File Name:",IDC_STATIC,7,32,36,8
+    LTEXT           "Product Name:",IDC_STATIC,7,50,49,8
+    LTEXT           "",IDC_PRODUCT_NAME,60,50,131,21
+    LTEXT           "Company:",IDC_STATIC,7,85,49,8
+    LTEXT           "",IDC_PRODUCT_COMP,60,86,152,19
+    ICON            "",IDC_PRODUCT_ICON,197,51,20,20,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_DISPLAYNAME,60,7,167,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FILENAME,59,28,148,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_FILE_BROWSE,214,31,13,11
+    GROUPBOX        "Parameters",IDC_STATIC,7,106,218,98
+    LTEXT           "Identify by:",IDC_STATIC,19,115,39,8
+    COMBOBOX        IDC_IDENTITYBY,89,113,82,53,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Security Level:",IDC_STATIC,19,136,54,8
+    CONTROL         "Never isolate",IDC_RADIO_ALLTRUST,"Button",
+                    BS_AUTORADIOBUTTON,90,138,58,10
+    CONTROL         "Isolate on access",IDC_RADIO_TRUST,"Button",
+                    BS_AUTORADIOBUTTON,90,150,71,10
+    CONTROL         "Auto-isolation, no pop-ups",IDC_RADIO_NOPOPUPS,"Button",
+                    BS_AUTORADIOBUTTON,90,162,101,10
+    CONTROL         "Always start isolated",IDC_RADIO_JAIL,"Button",
+                    BS_AUTORADIOBUTTON,90,175,83,10
+    CONTROL         "Untrusted (Jail)",IDC_RADIO_UNTRUST,"Button",
+                    BS_AUTORADIOBUTTON,90,187,65,10
+    LTEXT           "Description:",IDC_STATIC,7,68,49,8
+    LTEXT           "",IDC_PRODUCT_DESC,60,68,131,19
+END
+
+IDD_APPLICATION_RULE DIALOGEX 0, 0, 331, 111
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Application Rule Properties"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_ICON3,IDC_STATIC,7,8,21,20,SS_REALSIZEIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT_RULE,7,49,302,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_FILE_BROWSE,310,50,13,11
+    LTEXT           "Access Permission:",IDC_STATIC,164,79,61,8
+    COMBOBOX        IDC_RULE_PERM,228,77,89,49,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Resource Access Rule",IDC_STATIC,39,16,85,8
+    COMBOBOX        IDC_OBJECT_TYPE,64,77,90,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Resource Name:",IDC_STATIC,7,38,54,8
+    LTEXT           "Resource Type:",IDC_STATIC,7,79,52,8
+END
+
+IDD_LOG_PROPERTY DIALOGEX 0, 0, 209, 74
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Log Properties"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "From:",IDC_STATIC,17,23,34,8
+    CONTROL         "",IDC_DATE_FROM,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    WS_TABSTOP,57,18,100,15
+    LTEXT           "To:",IDC_STATIC,24,41,22,8
+    CONTROL         "",IDC_DATE_TO,"SysDateTimePick32",DTS_RIGHTALIGN | 
+                    WS_TABSTOP,57,38,100,15
+    GROUPBOX        "Time period",IDC_STATIC,7,7,195,60
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 223, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,166,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,166,24,50,14
+END
+
+IDD_DIALOG_SCAN DIALOGEX 0, 0, 252, 66
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_TOPMOST
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Stop",IDSTOP,101,44,50,14
+    CONTROL         "",IDC_PROGRESS_SCAN,"msctls_progress32",WS_BORDER | 
+                    WS_GROUP,7,24,238,14
+    LTEXT           "Scanning for untrusted files...",IDC_STATIC,15,8,97,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_RESOURCE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 9
+        RIGHTMARGIN, 230
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_APPLICATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        VERTGUIDE, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+        HORZGUIDE, 17
+        HORZGUIDE, 36
+        HORZGUIDE, 50
+        HORZGUIDE, 105
+        HORZGUIDE, 134
+        HORZGUIDE, 142
+        HORZGUIDE, 154
+        HORZGUIDE, 167
+        HORZGUIDE, 180
+        HORZGUIDE, 192
+    END
+
+    IDD_APPLICATION_RULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 324
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_LOG_PROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_DIALOG_SCAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        VERTGUIDE, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_RULE32              BITMAP                  "bitmap1.bmp"
+IDR_SMICONS             BITMAP                  "smicons.bmp"
+IDR_LGICONS             BITMAP                  "lgicons.bmp"
+IDB_SMOPEN              BITMAP                  "smopen.bmp"
+IDB_SMBMP               BITMAP                  "smbmp_3.bmp"
+IDB_LGBMP               BITMAP                  "lgbmp_3.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+SETTINGS.HTM            HTML                    "settings.htm"
+SETTINGS_W2K.HTM        HTML                    "settings_w2k.htm"
+RELOAD.HTM              HTML                    "reload.htm"
+RELOAD_W2K.HTM          HTML                    "reload_w2k.htm"
+RED.GIF                 HTML                    "red.gif"
+RED2.GIF                HTML                    "red2.gif"
+BROWN_H.GIF             HTML                    "brown_h.gif"
+BROWN2_H.GIF            HTML                    "brown2_h.gif"
+YELLOW.GIF              HTML                    "yellow.gif"
+YELLOW2.GIF             HTML                    "yellow2.gif"
+GREEN.GIF               HTML                    "green.gif"
+GREEN2.GIF              HTML                    "green2.gif"
+GREEN_S.GIF             HTML                    "green_s.gif"
+GREEN2_S.GIF            HTML                    "green2_s.gif"
+RED_S.GIF               HTML                    "red_s.gif"
+RED2_S.GIF              HTML                    "red2_s.gif"
+PROCLIST.HTM            HTML                    "proclist.htm"
+PROCLOAD.HTM            HTML                    "Procload.htm"
+PROCLOAD_W2K.HTM        HTML                    "Procload_w2k.htm"
+GREEN_CLOSE.PNG         HTML                    "green_close.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_SNAPINDESC          "GeSWall Security Policy"
+    IDS_NAME                "GeSWall"
+    IDS_OWNER_DESC          "A resource identified by Windows Security Descriptor Owner. Type a name of user or group of resource owner in format [Domain\\]User, e.g: Foo\\Administrators"
+    IDS_NAME_DESC           "A resource identified by its name. Type a start of resource name, e.g.: %SystemRoot%\\system32\\drivers\\, HKLM\\SAM, \\Device\\TCP"
+    IDS_SNAPINNAME          "GeSWall"
+    IDS_CERT_DESC           "An executable file[s] identified by signing certificate. Type certificate subject to which the code signing certificate is issued, e.g: Microsoft Corporation."
+    8                       "Group"
+    IDS_ABOUTNAME           "GeSWall"
+    IDS_PST_ROCKET          "Resource"
+    IDS_PST_LANDBASED       "Land-based vehicle settings"
+    IDS_APPLICATION         "Application"
+    IDS_APPLICATION_RULE    "Application rule"
+    IDS_LOG                 "Log Properties"
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_LOGO         BITMAP                  "..\\images\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+GREEN_CLOSE_B.PNG       HTML                    "green_close_b.png"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,7 @@
+LIBRARY	gswgp
+
+EXPORTS
+	DllRegisterServer		PRIVATE
+	DllUnregisterServer		PRIVATE
+	ProcessGeSWallPolicy	PRIVATE
+

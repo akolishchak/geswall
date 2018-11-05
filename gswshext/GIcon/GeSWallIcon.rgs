@@ -1,0 +1,51 @@
+HKCR
+{
+	GIcon.GeSWallIcon.1 = s 'GeSWallIcon Class'
+	{
+		CLSID = s '{64553E13-4BBB-4930-A3D0-4447DDC1B04A}'
+	}
+	GIcon.GeSWallIcon = s 'GeSWallIcon Class'
+	{
+		CLSID = s '{64553E13-4BBB-4930-A3D0-4447DDC1B04A}'
+		CurVer = s 'GIcon.GeSWallIcon.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {64553E13-4BBB-4930-A3D0-4447DDC1B04A} = s 'GeSWallIcon Class'
+		{
+			ProgID = s 'GIcon.GeSWallIcon.1'
+			VersionIndependentProgID = s 'GIcon.GeSWallIcon'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{F876D463-EC6F-4E50-BCEA-082E9E870396}'
+		}
+	}
+}
+
+HKLM
+{
+  NoRemove SOFTWARE
+  {
+    NoRemove Microsoft
+    {
+      NoRemove Windows
+      {
+        NoRemove CurrentVersion
+        {
+          NoRemove Explorer
+          {
+            NoRemove ShellIconOverlayIdentifiers
+            {
+              ForceRemove GeswallIcon = s '{64553E13-4BBB-4930-A3D0-4447DDC1B04A}'
+              {
+              }           
+            }
+          }
+        }
+      }
+    }
+  }
+}

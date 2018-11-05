@@ -1,0 +1,9 @@
+; GIcon.def : Declares the module parameters.
+
+LIBRARY      "GIcon.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

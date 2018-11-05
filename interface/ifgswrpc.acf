@@ -1,0 +1,31 @@
+[
+explicit_handle,
+enable_allocate
+]
+interface GSWRPC
+{
+[comm_status, fault_status] GswrpcRefreshResources();
+[comm_status, fault_status] GswrpcRefreshApp();
+[comm_status, fault_status] GswrpcRefreshApplications();
+[comm_status, fault_status] GswrpcQueryAuthorizationObject();
+[comm_status, fault_status] GswrpcRegisterClient();
+[comm_status, fault_status] GswrpcPutReply();
+[comm_status, fault_status] GswrpcUiRequest();
+[comm_status, fault_status] GswrpcCancelUiRequest();
+
+[comm_status, fault_status] GswrpcUpdateDb();
+[comm_status, fault_status] GswrpcCheckUpdateDb();
+
+[comm_status, fault_status] GswrpcGetProcessState();
+[comm_status, fault_status] GswrpcCancelPMWait();
+[comm_status, fault_status] GswrpcGetDesktopHook();
+[comm_status, fault_status] GswrpcSetDesktopHook();
+[comm_status, fault_status] GswrpcWaitProcessMarkerInfo();
+
+[comm_status, fault_status] GswrpcRegisterExecClient ();
+[comm_status, fault_status] GswrpcCreateProcess ();
+[comm_status, fault_status] GswrpcCreateProcessWait ();
+[comm_status, fault_status] GswrpcCreateProcessResult ();
+[comm_status, fault_status] GswrpcCancelCreateProcessWait ();
+[comm_status, fault_status] GswrpcGetNumberOfTrialDays();
+}

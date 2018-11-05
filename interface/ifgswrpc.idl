@@ -1,0 +1,226 @@
+[uuid( 16FA8F1D-07C1-4e39-912B-08B7B02947E2 ), version( 1.0 ), pointer_default( unique )]
+interface GSWRPC
+{
+
+import "wtypes.idl";
+
+// enforce Unicode
+#pragma midl_echo( "#ifdef _MBCS" )
+#pragma midl_echo( "#error \"The GSWRPC interface is designed to be used in UNICODE projects\"" )
+#pragma midl_echo( "#endif // _MBCS" )
+
+error_status_t GswrpcRefreshResources(
+    [in]  handle_t IDL_handle
+);
+
+error_status_t GswrpcRefreshApp(
+    [in]  handle_t IDL_handle,
+    [in]  int AppId
+);
+
+error_status_t GswrpcRefreshApplications(
+    [in]  handle_t IDL_handle
+);
+
+error_status_t GswrpcQueryAuthorizationObject(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId,
+    [out] wchar_t objectName[512]
+);
+
+error_status_t GswrpcRegisterClient(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] unsigned int objectHandle, 
+    [out] wchar_t authorityHash[512]
+);
+
+error_status_t GswrpcPutReply(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t authorityHash[512],
+    [in] int RequestId,
+    [in] int Reply
+);
+
+error_status_t GswrpcUpdateDb(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t authorityHash[512],
+    [out] int *updateResult
+);
+
+error_status_t GswrpcCheckUpdateDb(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t authorityHash[512],
+    [out] int *updateResult
+);
+
+typedef struct _GUIRequestInfo {
+    wchar_t FileName1[512];
+    wchar_t FileName2[512];
+    int Type;
+} GUIRequestInfo;
+
+error_status_t GswrpcUiRequest(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t authorityHash[512],
+    [out] int *RequestId,
+    [out] GUIRequestInfo *Request
+);
+
+error_status_t GswrpcCancelUiRequest(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t authorityHash[512]
+);
+
+error_status_t GswrpcGetProcessState(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [out] int *processState
+);
+
+error_status_t GswrpcCancelPMWait(
+    [in]  handle_t IDL_handle,
+    [in] unsigned int processId
+);
+
+error_status_t GswrpcGetDesktopHook(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t desktopName[512],
+    [out] unsigned int* hook_handle
+);
+
+error_status_t GswrpcSetDesktopHook(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId, 
+    [in] wchar_t desktopName[512],
+    [in] unsigned int hook_handle
+);
+
+typedef struct _ProcMarkerInfo {
+    int          m_type;
+    unsigned int m_processState;
+//    unsigned int m_hookHandle;
+} ProcMarkerInfo;
+
+error_status_t GswrpcWaitProcessMarkerInfo(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId,
+    [out] ProcMarkerInfo* processInfo,
+    [in] int timeout
+);
+
+error_status_t GswrpcRefreshSettings(
+    [in]  handle_t IDL_handle
+);
+
+error_status_t GswrpcRegisterExecClient(
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId
+);
+
+typedef struct _ExecResult {
+    unsigned int m_process_id;
+    unsigned int m_thread_id;
+    unsigned int m_process_handle;
+    unsigned int m_thread_handle;
+    BOOL         m_result;
+} ExecResult;
+
+typedef struct _STARTUPINFO_t {
+	unsigned int cb;  
+	wchar_t lpReserved[1024];  
+	wchar_t lpDesktop[1024];  
+	wchar_t lpTitle[1024];
+	unsigned int dwX;  
+	unsigned int dwY;  
+	unsigned int dwXSize;  
+	unsigned int dwYSize;  
+	unsigned int dwXCountChars;  
+	unsigned int dwYCountChars;  
+	unsigned int dwFillAttribute;  
+	unsigned int dwFlags;  
+	short wShowWindow;  
+	short cbReserved2;  
+	unsigned int lpReserved2;  
+	unsigned int hStdInput;  
+	unsigned int hStdOutput;  
+	unsigned int hStdError;
+} STARTUPINFO_t;
+
+
+error_status_t GswrpcCreateProcess (
+    [in]          handle_t              IDL_handle,
+    [in]          unsigned int          processId,
+    [in]          int                   requestType,
+    [in, string]  LPCWSTR               lpApplicationName,
+    [in, string]  LPWSTR                lpCommandLine,
+//    [in]          LPSECURITY_ATTRIBUTES lpProcessAttributes,
+//    [in]          LPSECURITY_ATTRIBUTES lpThreadAttributes,
+    [in]          BOOL                  bInheritHandles,
+    [in]          DWORD                 dwCreationFlags,
+//    [in]          LPVOID                lpEnvironment,
+    [in, string]  LPCWSTR               lpCurrentDirectory,
+	[in]		  STARTUPINFO_t			StartupInfo,
+//    [in]          LPSTARTUPINFOW        lpStartupInfo,
+//    [out]         LPPROCESS_INFORMATION lpProcessInformation,
+    [out]         ExecResult*           result
+  );
+
+error_status_t GswrpcCreateProcessWait (
+    [in]          handle_t              IDL_handle,
+    [in]          unsigned int          processId,
+    [out]         int*                  requestType,
+    [out]         unsigned int*         token,
+    [out]         wchar_t               lpApplicationName[1024],
+    [out]         wchar_t               lpCommandLine[1024],
+    [out]         BOOL*                 bInheritHandles,
+    [out]         DWORD*                dwCreationFlags,
+    [out]         wchar_t               lpCurrentDirectory[1024],
+	[out]		  STARTUPINFO_t*		lpStartupInfo,
+    [out]         int*                  requestId
+  );
+
+error_status_t GswrpcCreateProcessResult (
+    [in]          handle_t              IDL_handle,
+    [in]          unsigned int          processId,
+    [in]          int                   requestId,
+    [in]          ExecResult*           result
+  );
+
+error_status_t GswrpcCancelCreateProcessWait (
+    [in] handle_t IDL_handle,
+    [in] unsigned int processId
+);
+
+typedef enum _ModifierType {
+	modNone,
+	modRemove,
+	modAutoIsolate,
+	modAlwaysTrusted,
+	modForceIsolation,
+} ModifierType;
+
+error_status_t GswrpcSetParamsModifier (
+    [in] handle_t IDL_handle,
+	[in] ModifierType Type,
+	[in] unsigned int ProcessId,
+	[in] unsigned int ThreadId
+);
+
+error_status_t GswrpcGetNumberOfTrialDays (
+    [in] handle_t IDL_handle,
+	[out] int *DaysNum
+);
+
+error_status_t GswrpcSwitchToLicense (
+    [in] handle_t IDL_handle,
+	[in] wchar_t LicenseFile[512]
+);
+
+}

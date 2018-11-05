@@ -1,0 +1,374 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+2                       RT_MANIFEST             "gswshext.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 335, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Application Wizard"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,222,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,276,164,50,14
+    LTEXT           "Path",IDC_STATIC,26,14,33,10
+    LTEXT           "Display Name",IDC_STATIC,26,27,49,9
+    LTEXT           "Identification type",IDC_IDENTTEXT,26,58,62,12,NOT 
+                    WS_VISIBLE
+    LTEXT           "Group",IDC_STATIC,26,42,27,10
+    EDITTEXT        IDC_EDIT1,91,13,162,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,91,26,162,13,ES_AUTOHSCROLL,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_COMBO1,91,40,162,137,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "< Back",IDBACK,166,164,51,14
+    LTEXT           "Step 2.",IDC_STATIC,303,80,24,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO2,91,58,114,120,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Security Level",IDC_GSECLEVEL,91,74,113,67,NOT 
+                    WS_VISIBLE
+    CONTROL         "Never Isolate",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,100,86,59,10
+    CONTROL         "Isolate on access",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE,100,99,71,10
+    CONTROL         "Auto-isolation, no pop-ups",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE,100,114,101,10
+    CONTROL         "Always start isolated",IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE,100,128,83,10
+    ICON            "",IDC_PRODUCT_ICON,277,15,20,20
+    GROUPBOX        "",IDC_GROUP,0,154,335,28,BS_FLAT
+    CONTROL         "App",IDC_STATIC01,"Static",SS_LEFTNOWORDWRAP | NOT 
+                    WS_VISIBLE | WS_GROUP,26,145,158,8,WS_EX_TRANSPARENT
+    LTEXT           "Static",IDC_STATIC02,5,71,126,12,SS_ENDELLIPSIS | NOT 
+                    WS_VISIBLE
+    LTEXT           "Static",IDC_STATIC03,4,81,126,18,SS_ENDELLIPSIS | NOT 
+                    WS_VISIBLE
+    LTEXT           "Static",IDC_STATIC05,1,108,126,18,SS_ENDELLIPSIS | NOT 
+                    WS_VISIBLE
+    CONTROL         "Autofill rules for this application",IDC_AUTORULES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,161,124,8
+    LTEXT           "Static",IDC_STATIC04,1,90,126,18,SS_ENDELLIPSIS | NOT 
+                    WS_VISIBLE,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | 
+                    WS_BORDER,222,148,107,8
+    LTEXT           "Please,wait...",IDC_WAITTEXT,221,128,106,20,NOT 
+                    WS_VISIBLE
+    LTEXT           "warning                        ",IDC_GWARNING,257,40,74,
+                    15,0,WS_EX_TRANSPARENT
+    CONTROL         "Move to the existing group",IDC_MOVEGROUP,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | NOT WS_VISIBLE | 
+                    WS_TABSTOP,257,56,61,19
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,216,136,91,21,WS_EX_TRANSPARENT
+    LTEXT           "Processing time (in secs) -        increase for better analysis",
+                    IDC_PROCESSTXT,222,120,100,16
+    EDITTEXT        IDC_EDIT3,311,137,14,16,ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_READONLY
+    CONTROL         "Enable macros mode for rules",IDC_CHECKMACROS,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,26,171,110,
+                    10
+    PUSHBUTTON      "New Group",IDC_NEWGROUP,209,58,44,12,NOT WS_VISIBLE
+    PUSHBUTTON      "X",IDC_APP_DB_DELETE,191,144,13,11,NOT WS_VISIBLE
+    LTEXT           "Delete from GeSWall's DB",IDC_STATIC001,104,145,82,10,
+                    NOT WS_VISIBLE
+    LTEXT           "Modify existing!",IDC_STATIC0001,26,145,51,9
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 335, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Application Wizard"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,222,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,276,164,50,14
+    PUSHBUTTON      "< Back",IDBACK,166,164,51,14
+    LTEXT           "Describe resources required by your application - create specific rules",
+                    IDC_STATIC,12,6,223,8
+    LTEXT           "Step 3.",IDC_STATIC,307,146,24,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_RULE,6,120,192,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_OBJECT,204,120,60,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_ACCESS,268,120,60,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADDITEM,6,138,48,12
+    PUSHBUTTON      "Delete",IDC_DELITEM,60,138,48,12,WS_DISABLED
+    CONTROL         "",IDC_STRLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_EDITLABELS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,6,24,324,84,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,0,154,335,28,BS_FLAT
+    PUSHBUTTON      "Import Rules",IDC_LOADLIST,6,164,48,12
+    PUSHBUTTON      "Export Rules",IDC_SAVELIST,60,164,48,12
+    CONTROL         "Enable macros",IDC_CHECKMACROS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,166,136,62,10
+    CONTROL         "Disable warning messages",IDC_WARNMESS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,166,146,114,11
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 335, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Application Wizard"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Finish",IDOK,222,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,276,164,50,14
+    LTEXT           "Do you want to start application after installation?",
+                    IDC_STATIC,98,102,190,8
+    LTEXT           "Step 4.",IDC_STATIC,307,146,24,8,NOT WS_VISIBLE
+    PUSHBUTTON      "< Back",IDBACK,166,164,51,14
+    GROUPBOX        "",IDC_STATIC,0,154,335,28,BS_FLAT
+    LTEXT           "Completing GeSWall’s Application Wizard",IDC_HEADER,54,
+                    8,266,20
+    LTEXT           "To complete  setup of the application  press Finish button.",
+                    IDC_STATIC,98,43,206,11
+    CONTROL         "Yes, I want to start program immediately",IDC_RUNAPP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,98,117,152,10
+    LTEXT           "Then all settings will be saved into the Application Database.",
+                    IDC_STATIC,98,57,222,8
+    CONTROL         108,IDI_LOGO,"Static",SS_BITMAP | SS_SUNKEN,10,29,78,69,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_DIALOG0 DIALOGEX 0, 0, 335, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | 
+    DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_APPWINDOW
+CAPTION "Application Wizard"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDNEXT,222,164,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,276,164,50,14
+    LTEXT           "Welcome to the Geswall's Application Wizard!",
+                    IDC_HEADER,55,8,268,11
+    LTEXT           "Step 1.",IDC_STATIC,307,147,24,8,NOT WS_VISIBLE
+    CONTROL         108,IDI_LOGO,"Static",SS_BITMAP | SS_SUNKEN,10,29,78,69,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Expert mode",IDC_EXPERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,144,170,53,8
+    LTEXT           "www.gentlesecurity.com",IDC_STATIC5,10,100,80,8
+    GROUPBOX        "",IDC_STATIC,0,154,335,28,BS_FLAT
+    LTEXT           "To continue, click Next",IDC_STATIC,143,146,88,8
+    LTEXT           "This wizard helps you to configure safe applications. The applications become safe as GeSWall isolates them. GeSWall’s isolation enforces security policy that effectively prevents damage from various attacks and mal-ware.",
+                    IDC_STATIC2,99,30,221,34
+    LTEXT           "With this wizard you can:",IDC_STATIC,100,65,211,8
+    LTEXT           "- Add new safe application into Application Database",
+                    IDC_STATIC,108,73,216,8
+    LTEXT           "- Configure rules for your application (in expert mode)",
+                    IDC_STATIC,108,81,220,9
+    LTEXT           "- Configure isolation settings of your application",
+                    IDC_STATIC,108,90,225,13
+    LTEXT           "Application with  the same Version Info is found in database!",
+                    IDC_MODIFYTXT,8,160,131,17,NOT WS_VISIBLE
+    CONTROL         "Add new",IDC_MODIFYEXST,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,144,160,70,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        HORZGUIDE, 54
+        HORZGUIDE, 65
+        HORZGUIDE, 79
+        HORZGUIDE, 127
+    END
+
+    IDD_DIALOG0, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        TOPMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "runisolated.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "Gwicon.ico"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NEWGROUP DIALOGEX 0, 0, 299, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Groups"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDC_APPLY,76,65,61,14
+    COMBOBOX        IDC_COMBO1,76,14,192,15,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Parent Group:",IDC_STATIC,25,15,48,12
+    EDITTEXT        IDC_GROUPNAME,76,33,141,14,ES_AUTOHSCROLL
+    LTEXT           "New Group Name:",IDC_STATIC,12,36,61,10
+    PUSHBUTTON      "Cancel",IDC_CANCEL,153,65,64,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_NEWGROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP                  "wizard.bmp"
+IDB_BITMAP3             BITMAP                  "logo\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+WIZARDICON              ICON                    "wizard.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

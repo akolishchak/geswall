@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gswgp", "gswgp.vcproj", "{60585D1C-16DE-42A2-AE16-4D4CC538452E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{60585D1C-16DE-42A2-AE16-4D4CC538452E}.Debug.ActiveCfg = Debug|Win32
+		{60585D1C-16DE-42A2-AE16-4D4CC538452E}.Debug.Build.0 = Debug|Win32
+		{60585D1C-16DE-42A2-AE16-4D4CC538452E}.Release.ActiveCfg = Release|Win32
+		{60585D1C-16DE-42A2-AE16-4D4CC538452E}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

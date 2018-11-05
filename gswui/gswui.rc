@@ -1,0 +1,14 @@
+
+#include <windows.h>
+
+#include <ntverp.h>
+
+#define VER_FILETYPE                VFT_DRV
+#define VER_FILESUBTYPE             VFT2_DRV_SYSTEM
+
+#include "build.h"
+
+#include "..\gsw\common.rc2"
+
+LANGUAGE 0x9,0x1
+1 11 MSG00409.bin

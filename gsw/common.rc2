@@ -1,0 +1,43 @@
+
+#include "globalbuild.h"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+VS_VERSION_INFO VERSIONINFO
+
+FILEVERSION MAJOR_VER,MINOR_VER,BUILD_VER,CSD_VER
+PRODUCTVERSION MAJOR_VER,MINOR_VER,CSD_VER,0
+
+#define VER_VERSION_UNICODE_LANG  "000004B0" 
+#define VER_VERSION_ANSI_LANG     "000004E4" 
+#define VER_VERSION_TRANSLATION   0x0000, 0x04B0
+#define _STR(x)	#x
+#define STR(x)	_STR(x)
+
+FILEFLAGSMASK  VER_FILEFLAGSMASK
+FILEFLAGS      VER_FILEFLAGS
+FILEOS         VER_FILEOS
+FILETYPE       VER_FILETYPE
+FILESUBTYPE    VER_FILESUBTYPE
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK VER_VERSION_UNICODE_LANG
+        BEGIN
+            VALUE "CompanyName",     COMPANYNAME
+            VALUE "FileDescription", FILEDESCRIPTION
+            VALUE "FileVersion",     STR(MAJOR_VER) "." STR(MINOR_VER) "." STR(BUILD_VER) "." STR(CSD_VER)
+            VALUE "InternalName",    INTERNALNAME
+            VALUE "LegalCopyright",  COPYRIGHT
+            VALUE "OriginalFilename",ORIGINALFILENAME
+            VALUE "ProductName",     PRODUCTNAME
+            VALUE "ProductVersion",  STR(MAJOR_VER) "." STR(MINOR_VER) "." STR(CSD_VER)
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", VER_VERSION_TRANSLATION
+    END
+END
+
+

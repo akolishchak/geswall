@@ -1,0 +1,481 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+2                       RT_MANIFEST             "gswui.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_REQ DIALOGEX 0, 0, 267, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "GeSWall"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDYES,141,132,50,14
+    PUSHBUTTON      "&No",IDNO,198,132,50,14
+    CONTROL         "Do not ask again",IDC_CHECK_REQ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,51,134,71,8
+    LTEXT           "Do you want to isolate this applcation from the rest of system?",
+                    IDC_LABEL_QUESTION_TRUST,7,38,236,10
+    LTEXT           "",IDC_LABEL_FILENAME,61,57,199,22,SS_CENTERIMAGE | 
+                    SS_PATHELLIPSIS
+    CONTROL         "Product: ",IDC_LABEL_PRODUCT_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,18,97,35,10
+    CONTROL         "",IDC_LABEL_PRODUCT,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,61,97,199,10
+    LTEXT           "An application is trying to establish a network connection or read untrusted resources",
+                    IDC_LABEL_TEXT_TRUST,36,8,225,17
+    CONTROL         "Company: ",IDC_LABEL_COMPANY_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,18,110,35,10
+    CONTROL         "",IDC_LABEL_COMPANY,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,61,110,199,11
+    ICON            "",IDI_REQ_APPLICATION,19,57,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    CONTROL         "Description: ",IDC_LABEL_DESCRIPTION_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,18,84,43,10
+    CONTROL         "",IDC_LABEL_DESCRIPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,61,84,199,10
+    ICON            IDI_ICON_LOGO,IDI_REQ_LOGO_TRUST,9,6,20,20,
+                    SS_CENTERIMAGE | SS_REALSIZEIMAGE
+END
+
+IDD_DIALOG_REQCONF DIALOGEX 0, 0, 270, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "GeSWall"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDYES,139,172,50,14
+    PUSHBUTTON      "&No",IDNO,197,172,50,14
+    CONTROL         "Do not ask again",IDC_CHECK_REQ_CONF,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,49,175,71,
+                    8
+    LTEXT           "Do you want to deny access to the file folder for this application?",
+                    IDC_LABEL_TEXT_QUESTION_CONF,9,37,236,10
+    LTEXT           "",IDC_LABEL_APP,62,50,201,24,SS_CENTERIMAGE | 
+                    SS_PATHELLIPSIS
+    CONTROL         "Product: ",IDC_LABEL_PRODUCT_TEXT_CONF,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,16,94,36,10
+    CONTROL         "",IDC_LABEL_PRODUCT_CONF,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,62,93,201,8
+    LTEXT           "An untrusted application is trying to access a confidential file folder. It could leak confidential files outside.",
+                    IDC_LABEL_TEXT_CONF,32,6,231,25
+    CONTROL         "Company: ",IDC_LABEL_COMPANY_TEXT_CONF,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,16,106,35,8
+    CONTROL         "",IDC_LABEL_COMPANY_CONF,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,62,106,201,8
+    ICON            "",IDI_REQCONF_APPLICATION,17,52,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    CONTROL         "Description: ",IDC_LABEL_DESCRIPTION_TEXT_CONF,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,16,80,40,8
+    CONTROL         "",IDC_LABEL_DESCRIPTION_CONF,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,62,80,201,8
+    CONTROL         "The confidential file folder: ",
+                    IDC_LABEL_CONFIDENT_TEXT,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,7,124,91,10
+    LTEXT           "",IDC_LABEL_CONFIDENT,62,137,201,21,SS_CENTERIMAGE | 
+                    SS_PATHELLIPSIS
+    ICON            "",IDI_REQCONF_CONFIDENT,18,137,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    ICON            IDI_ICON_LOGO,IDI_REQ_LOGO_CONF,8,8,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+END
+
+IDD_DIALOG_TRACKED DIALOGEX 0, 0, 269, 162
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "GeSWall"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDYES,143,135,50,14
+    PUSHBUTTON      "&No",IDNO,200,135,50,14
+    CONTROL         "Do not ask again",IDC_CHECK_REQ,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,53,137,71,8
+    LTEXT           "Do you want to isolate this applcation from the rest of system?",
+                    IDC_LABEL_QUESTION_TRUST,9,41,236,10
+    LTEXT           "",IDC_LABEL_FILENAME,63,60,199,22,SS_CENTERIMAGE | 
+                    SS_PATHELLIPSIS
+    CONTROL         "Product: ",IDC_LABEL_PRODUCT_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,20,100,35,10
+    CONTROL         "",IDC_LABEL_PRODUCT,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,63,100,199,10
+    LTEXT           "An application you are starting has been received from an untrusted source and may hurt the system",
+                    IDC_LABEL_TEXT_TRUST,37,10,225,17
+    CONTROL         "Company: ",IDC_LABEL_COMPANY_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,20,113,35,10
+    CONTROL         "",IDC_LABEL_COMPANY,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,63,113,199,11
+    ICON            "",IDI_REQ_APPLICATION,21,60,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    CONTROL         "Description: ",IDC_LABEL_DESCRIPTION_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,20,87,43,10
+    CONTROL         "",IDC_LABEL_DESCRIPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,63,87,199,10
+    ICON            IDI_ICON_LOGO,IDI_REQ_LOGO_TRUST,11,9,20,20,
+                    SS_CENTERIMAGE | SS_REALSIZEIMAGE
+END
+
+IDD_DIALOG_SELECT_ISOLATED_DIR DIALOGEX 0, 0, 297, 71
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Grant Access to the File Folder"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,182,49,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,237,49,50,14
+    ICON            IDI_ICON_LOGO,IDI_REQ_LOGO_CONF,8,4,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    LTEXT           "Grant write access to the  specified file folder for this application instance",
+                    IDC_STATIC,36,11,235,11
+    EDITTEXT        IDC_EDIT_DIRECTORY,7,29,264,14,ES_AUTOHSCROLL
+    CONTROL         "Create Permanent Rule",IDC_CHECK_PERMANENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,36,52,94,10
+    PUSHBUTTON      "...",IDC_BUTTON_DIR_BROWSE,273,29,15,15
+END
+
+IDD_DIALOG_LICENSE DIALOGEX 0, 0, 304, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GeSWall License"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Purchase Now",IDPURCHASE,125,145,52,14,NOT WS_VISIBLE
+    GROUPBOX        "New License Information",IDC_STATIC,7,110,290,31
+    LTEXT           "",IDC_LICENSE_INFO,97,11,193,51
+    EDITTEXT        IDC_LICENSE_EDIT,49,122,224,14,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "File name:",IDC_STATIC,14,124,34,8
+    PUSHBUTTON      "Authorize",IDAUTHORIZE,182,145,52,14
+    PUSHBUTTON      "Close",IDLATER,239,145,52,14,NOT WS_VISIBLE
+    PUSHBUTTON      "...",IDC_LICENSE_BROWSE_BUTTON,275,122,15,14
+    CONTROL         121,IDI_REQ_LOGO_TRUST,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN,7,7,78,69,WS_EX_TRANSPARENT
+    LTEXT           "If you have received another license on the purchase or upgrade please enter its file name and press Authorize button at the bottom.",
+                    IDC_STATIC,7,87,290,18
+    PUSHBUTTON      "Try Professional Edition",IDTRYPRO,94,65,90,14,NOT 
+                    WS_VISIBLE
+    LTEXT           "Professional Edition Trial expired, switched to Freeware version",
+                    IDC_PROEXPIRED,94,67,203,10,NOT WS_VISIBLE
+    EDITTEXT        IDC_LICNUMBER,152,65,145,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_VISIBLE
+    LTEXT           "License Number:",IDC_LICNUMBER_LABEL,96,67,55,13
+END
+
+IDD_DIALOG_TRIALREQ DIALOGEX 0, 0, 299, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "GeSWall Professional Edition Trial"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Try Professional Edition",IDSTART_TRIAL,131,80,93,14
+    PUSHBUTTON      "Later",IDTRIAL_LATER,229,80,63,14
+    CONTROL         121,IDI_REQ_LOGO_TRUST,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN,7,7,78,69,WS_EX_TRANSPARENT
+    LTEXT           "You can enable Professional Edition for 15 days trial period. After 15 days the product reverts to functionality available in Freeware version.\n\nDo you want to start GeSWall Professional Edition Trial?",
+                    IDC_STATIC,91,28,201,45
+    CONTROL         "Do not ask again",IDC_CHECK_TRIAL_QUERY,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,48,83,69,
+                    10
+    LTEXT           "GeSWall Professional Edition is enhanced version of GeSWall\n Freeware version.",
+                    IDC_STATIC,90,7,202,23
+    LTEXT           "Learn more »",IDC_STATIC_HT1,156,15,46,9
+END
+
+IDD_DIALOG_TRIALEXP DIALOGEX 0, 0, 319, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "GeSWall Trial Expired"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Purchase Now",IDPURCHASENOW,191,123,56,14
+    PUSHBUTTON      "Close",IDCLOSE,257,123,55,14
+    CONTROL         121,IDI_REQ_LOGO_TRUST,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN,7,15,78,69,
+                    WS_EX_TRANSPARENT
+    LTEXT           "GeSWall Professional Edition Trial is expired. The product reverts to functionality available in Freeware version.",
+                    IDC_STATIC,91,14,221,19
+    LTEXT           "These applications will NOT be SAFE next time you start them:",
+                    IDC_STATIC_APPS_LABEL,92,39,220,8
+    LTEXT           "",IDC_STATIC_APPS_LIST,94,52,218,41
+    LTEXT           "Malware and intruders coming through these applications will cause damage of your system.",
+                    IDC_STATIC,11,99,298,12
+    LTEXT           "Learn more on attacks GeSWall prevents »",
+                    IDC_STATIC_HT2,12,109,242,10
+END
+
+IDD_DIALOG_SETUP DIALOGEX 0, 0, 269, 162
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "GeSWall"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDYES,143,135,50,14
+    PUSHBUTTON      "&No",IDNO,200,135,50,14
+    LTEXT           "Do you want to isolate this INSTALLER from the rest of system?",
+                    IDC_LABEL_QUESTION_TRUST,9,34,236,10
+    LTEXT           "",IDC_LABEL_FILENAME,63,63,199,22,SS_CENTERIMAGE | 
+                    SS_PATHELLIPSIS
+    CONTROL         "Product: ",IDC_LABEL_PRODUCT_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,20,103,35,10
+    CONTROL         "",IDC_LABEL_PRODUCT,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,63,103,199,10
+    LTEXT           "An application INSTALLER you are starting has been received from untrusted source and may hurt the system",
+                    IDC_LABEL_TEXT_TRUST,37,10,225,17
+    CONTROL         "Company: ",IDC_LABEL_COMPANY_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,20,116,35,10
+    CONTROL         "",IDC_LABEL_COMPANY,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,63,116,199,11
+    ICON            "",IDI_REQ_APPLICATION,21,65,20,20,SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE
+    CONTROL         "Description: ",IDC_LABEL_DESCRIPTION_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,20,90,43,10
+    CONTROL         "",IDC_LABEL_DESCRIPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,63,90,199,10
+    ICON            IDI_ICON_LOGO,IDI_REQ_LOGO_TRUST,11,9,20,20,
+                    SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    LTEXT           "Note: Isolated INSTALLER may not properly proceed with installation procedure. If you trust the INSTALLER, run it as non-isolated - press NO.",
+                    IDC_LABEL_SETUP_NOTE,9,44,236,22
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_REQ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        VERTGUIDE, 12
+        VERTGUIDE, 55
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 146
+        HORZGUIDE, 16
+        HORZGUIDE, 38
+        HORZGUIDE, 48
+        HORZGUIDE, 57
+        HORZGUIDE, 79
+        HORZGUIDE, 94
+        HORZGUIDE, 107
+        HORZGUIDE, 120
+        HORZGUIDE, 138
+    END
+
+    IDD_DIALOG_REQCONF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        VERTGUIDE, 12
+        VERTGUIDE, 58
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+        HORZGUIDE, 50
+        HORZGUIDE, 74
+        HORZGUIDE, 92
+        HORZGUIDE, 105
+        HORZGUIDE, 117
+        HORZGUIDE, 179
+    END
+
+    IDD_DIALOG_TRACKED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_DIALOG_SELECT_ISOLATED_DIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        VERTGUIDE, 14
+        VERTGUIDE, 36
+        VERTGUIDE, 296
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 63
+        HORZGUIDE, 29
+        HORZGUIDE, 32
+    END
+
+    IDD_DIALOG_LICENSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        VERTGUIDE, 94
+        VERTGUIDE, 124
+        VERTGUIDE, 176
+        VERTGUIDE, 182
+        VERTGUIDE, 234
+        VERTGUIDE, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DIALOG_TRIALREQ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        VERTGUIDE, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_DIALOG_TRIALEXP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+        HORZGUIDE, 47
+        HORZGUIDE, 96
+    END
+
+    IDD_DIALOG_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_LOGO           ICON                    "..\\images\\gicon1.ico"
+IDI_ICON_DLOGO          ICON                    "..\\images\\gdicion1.ico"
+IDI_ICON_UPDATE_1       ICON                    "..\\images\\update.ico"
+IDI_ICON_DISABLED_POLICY ICON                    "..\\images\\disabled03_3.ico"
+IDI_ICON_DISABLED_POLICY_W2K ICON                    "..\\images\\disabled_w2k.ico"
+IDI_ICON_LOGO_W2K       ICON                    "..\\images\\gicon1_w2k.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_LOGO         BITMAP                  "..\\images\\logo.bmp"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_BUTTON       BITMAP                  "toolwnd\\button.bmp"
+IDB_BITMAP_BUTTON_SMALL BITMAP                  "toolwnd\\button_small.bmp"
+IDB_BITMAP_DETECTOR_SKIN BITMAP                  "logwnd\\attack_detector.bmp"
+IDB_BITMAP_DETECTOR_SKIN_MASK BITMAP                  "logwnd\\attack_detector_mask.bmp"
+IDB_BITMAP_NOTIFY_SKIN  BITMAP                  "logwnd\\notify.bmp"
+IDB_BITMAP_NOTIFY_SKIN_MASK BITMAP                  "logwnd\\notify_mask.bmp"
+IDB_BITMAP_DETECTOR_SKIN_TOP_LEFT BITMAP                  "logwnd\\attack_detector_top_left.bmp"
+IDB_BITMAP_NOTIFY_SKIN_TOP_LEFT BITMAP                  "logwnd\\notify_top_left.bmp"
+IDB_BITMAP_NOTIFY_SKIN_TOP_RIGHT BITMAP                  "logwnd\\notify_top_right.bmp"
+IDB_BITMAP_DETECTOR_SKIN_TOP_RIGHT BITMAP                  "logwnd\\attack_detector_top_right.bmp"
+IDB_BITMAP_DETECTOR_SKIN_TERMINATE BITMAP                  "logwnd\\attack_detector_terminate.bmp"
+IDB_BITMAP_DETECTOR_SKIN_IGNORE BITMAP                  "logwnd\\attack_detector_ignore.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource1.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

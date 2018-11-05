@@ -1,0 +1,52 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gswserv", "gswserv.vcproj", "{F41EAB47-7A77-49E6-8770-6926F8DFEE5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E} = {83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E}
+		{4786AAE1-D3E3-4EA2-8087-108FA2A298C0} = {4786AAE1-D3E3-4EA2-8087-108FA2A298C0}
+		{DC904EFA-5AE9-4556-8BC5-CC84AB8A7444} = {DC904EFA-5AE9-4556-8BC5-CC84AB8A7444}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite.lib", "..\db\msvc71_sqlite_lib_w32.vcproj", "{83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\lib\zlib\1.2.2\win32\zlib.staticlib.msvc71.vcproj", "{DC904EFA-5AE9-4556-8BC5-CC84AB8A7444}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mcrypto", "..\lib\ltmc\mcrypto.staticlib.msvc71.vcproj", "{4786AAE1-D3E3-4EA2-8087-108FA2A298C0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "processexecutor", "..\processexecutor\processexecutor.msvc71.vcproj", "{61141B19-DC90-44FE-B3AA-8DC8B6C51F08}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F41EAB47-7A77-49E6-8770-6926F8DFEE5E}.Debug.ActiveCfg = Debug|Win32
+		{F41EAB47-7A77-49E6-8770-6926F8DFEE5E}.Debug.Build.0 = Debug|Win32
+		{F41EAB47-7A77-49E6-8770-6926F8DFEE5E}.Release.ActiveCfg = Release|Win32
+		{F41EAB47-7A77-49E6-8770-6926F8DFEE5E}.Release.Build.0 = Release|Win32
+		{83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E}.Debug.ActiveCfg = Debug|Win32
+		{83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E}.Debug.Build.0 = Debug|Win32
+		{83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E}.Release.ActiveCfg = Release|Win32
+		{83C63DC7-DFB8-4F2B-93B2-34FCABAA1F6E}.Release.Build.0 = Release|Win32
+		{DC904EFA-5AE9-4556-8BC5-CC84AB8A7444}.Debug.ActiveCfg = Debug|Win32
+		{DC904EFA-5AE9-4556-8BC5-CC84AB8A7444}.Debug.Build.0 = Debug|Win32
+		{DC904EFA-5AE9-4556-8BC5-CC84AB8A7444}.Release.ActiveCfg = Release|Win32
+		{DC904EFA-5AE9-4556-8BC5-CC84AB8A7444}.Release.Build.0 = Release|Win32
+		{4786AAE1-D3E3-4EA2-8087-108FA2A298C0}.Debug.ActiveCfg = Debug|Win32
+		{4786AAE1-D3E3-4EA2-8087-108FA2A298C0}.Debug.Build.0 = Debug|Win32
+		{4786AAE1-D3E3-4EA2-8087-108FA2A298C0}.Release.ActiveCfg = Release|Win32
+		{4786AAE1-D3E3-4EA2-8087-108FA2A298C0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

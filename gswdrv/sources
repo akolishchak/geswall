@@ -1,0 +1,46 @@
+TARGETNAME = geswall
+TARGETPATH = obj
+TARGETTYPE = DRIVER
+
+###########################################################
+# debug information
+!IF "$(DDKBUILDENV)" == "checked"
+NTDEBUG = ntsd
+NTDEBUGTYPE = both
+USE_PDB = 1
+MSC_OPTIMIZATION = -Od $(MSC_OPTIMIZATION)
+!ENDIF
+
+###########################################################
+# compiler settings
+#BROWSER_INFO = 1
+BROWSERFILE = geswall.bsc -n
+MSC_OPTIMIZATION = -Ob1 -Oi -Gy $(MSC_OPTIMIZATION)
+INCLUDES = ..\lib\ltmc_kernel;..\gsw;
+
+###########################################################
+# Resource compiler settings
+RCNOFONTMAP = 1
+
+SOURCES = \
+   geswall.cpp hook.cpp dispatch.cpp tools.cpp sysprocess.cpp hin.cpp x86.cpp adapi.cpp request.cpp \
+   rule.cpp aci.cpp acidyn.cpp log.cpp win32hook.cpp win32set.cpp \
+   fastio.cpp fsfilter.cpp fstools.cpp fssetinfo.cpp \
+   netfilter.cpp tdiio.cpp \
+   gesrule.cpp ntrulemap.cpp \
+   sxrule.cpp \
+   geswall.rc
+
+!IF "$(DDKBUILDENV)" == "checked"
+TARGETLIBS = ..\lib\ltmc_kernel\objchk_w2k_x86\i386\ltmc.lib \
+		     $(DDK_LIB_PATH)\ntstrsafe.lib \
+			 $(DDK_LIB_PATH)\wdmsec.lib \
+			 $(DDK_LIB_PATH)\csq.lib \
+			 $(DDK_LIB_PATH)\tdi.lib
+!ELSE
+TARGETLIBS = ..\lib\ltmc_kernel\objfre_w2k_x86\i386\ltmc.lib \
+		     $(DDK_LIB_PATH)\ntstrsafe.lib \
+			 $(DDK_LIB_PATH)\wdmsec.lib \
+			 $(DDK_LIB_PATH)\csq.lib \
+			 $(DDK_LIB_PATH)\tdi.lib
+!ENDIF

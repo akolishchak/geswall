@@ -1,0 +1,7 @@
+LIBRARY     gswshext
+EXPORTS
+            DllRegisterServer   Private
+            DllUnregisterServer Private
+            DllGetClassObject   Private
+            DllCanUnloadNow     Private
+            AppWizardW			Private
